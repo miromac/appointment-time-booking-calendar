@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment System</title>
+
+    <link rel="stylesheet" href="calendar.css">
+    <link rel="stylesheet" href="auth.css">
+  </head>
+  <body>
+    
+    <div id="auth_div"></div>
+
+    <div id="id01" class="modal">
+      
+      <form class="modal-content animate" method="post">
+        <div class="imgcontainer">
+          <span id="closeLoginModal" onclick="closeModalLogin()" class="close" title="Close Modal">&times;</span>
+          <img src="user.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="logincontainer">
+          <label for="uname"><b>Username</b></label>
+          <input id="uname" type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input id="psw" type="password" placeholder="Enter Password" name="psw" required>
+            
+          <button id="loginModal" onclick="login()">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+
+        <div class="logincontainer" style="background-color:#f1f1f1">
+          <button id="closeLoginModal" type="button" onclick="closeModalLogin()" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+
+    </div>
+
+    <div id="id02" class="modal2">
+      
+      <form class="modal2-content animate" method="post">
+        <div class="imgcontainer">
+          <span id="closeRegisterModal" onclick="closeModalRegister()" class="close" title="Close Modal">&times;</span>
+          <img src="user.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="registercontainer">
+          <label for="reguname"><b>Username</b></label>
+          <input id="reguname" type="text" placeholder="Enter Username" name="reguname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input id="regpsw" type="password" placeholder="Enter Password" name="regpsw" required>
+
+          <label for="psw"><b>Repeat Password</b></label>
+          <input id="reregpsw" type="password" placeholder="Enter Password" name="reregpsw" required>
+            
+          <button id="registerModal" onclick="register()">Register</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+
+        <div class="registercontainer" style="background-color:#f1f1f1">
+          <button id="closeRegisterModal" type="button" onclick="closeModalRegister()" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+
+    </div>
+
+    <div id="container">
+      <div id="beforeHeader">
+        <h5>Book Appointment System</h5>
+        <button id="logout" onclick="logout()">Logout</button>
+      </div>
+      <div id="header">
+        <div id="monthDisplay"></div>
+        <div>
+          <button id="backButton">Back</button>
+          <button id="nextButton">Next</button>
+        </div>
+      </div>
+
+      <div id="weekdays"></div>
+
+      <div id="calendar"></div>
+    </div>
+
+    <div id="newEventModal"></div>
+    <div id="modalBackDrop"></div>
+    
+    <script type="text/javascript" src="./auth.js"></script>
+    <script type="text/javascript" src="./calendar.js"></script>
+  </body>
+</html>
